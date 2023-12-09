@@ -22,13 +22,13 @@ module.exports = {
     'vuejs-accessibility/mouse-events-have-key-events': 0, // 关闭禁止使用鼠标事件
     'import/no-extraneous-dependencies': 0, // 关闭引入依赖报错
     'vue/multi-word-component-names': 'off', // 允许多个单词的组件名
-    'vue/html-indent': ['error', 2, {
-      'attribute': 1,
-      'baseIndent': 1,
-      'closeBracket': 0,
-      'alignAttributesVertically': true,
-      'ignores': []
-    }],
+    // 'vue/html-indent': ['error', 2, {
+    //   'attribute': 1,
+    //   'baseIndent': 1,
+    //   'closeBracket': 0,
+    //   'alignAttributesVertically': true,
+    //   'ignores': []
+    // }],
     'vue/html-self-closing': ['error', {
       'html': {
         'void': 'always',
@@ -39,6 +39,7 @@ module.exports = {
       'math': 'always'
     }],
     'vue/no-v-html': 'off', // 允许使用v-html
+    'no-undef': 'off', // 关闭未定义变量报错
     'vue/no-multiple-template-root': 'off', // 允许多个template根节点
   }
 }

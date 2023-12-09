@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: government-server
+  namespace: default
+  annotations:
+    lb.cke.tg.unicom/target-vports: 9031-9031
+spec:
+  selector:
+    app: government-server
+  ports:
+    - port: 9031
+      targetPort: 9031
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: government-server
+  namespace: default
+  labels:
+    app: government-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: government-server
+  template:
+    metadata:
+      labels:
+        app: government-server
+    spec:
+      containers:
+        - name: government-server
+          image: harbor.dcos.wuxi.unicom.local/tj-sale-center-prod/government-server
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 9031

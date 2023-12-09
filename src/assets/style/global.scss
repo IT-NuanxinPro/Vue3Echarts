@@ -1,0 +1,19 @@
+body,
+html {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 隐藏滚动条并不占据位置 */
+body {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}

@@ -1,6 +1,5 @@
 // 全局封装loading，基于element-plus
 import { ElLoading } from 'element-plus'
-
 const loading = {
   loadingInstance: null,
   open(title, backgroundColor) {
@@ -9,7 +8,7 @@ const loading = {
       this.loadingInstance = ElLoading.service({
         fullscreen: true,
         lock: true,
-        spinner: 'el-icon-loading',
+        // spinner: 'el-icon-loading',
         text: `${title || '拼命加载中...'}`,
         background: backgroundColor || 'rgba(0, 0, 0, 0.7)'
       })

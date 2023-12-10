@@ -4,16 +4,19 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import '@/assets/style/global.scss'
+import { setFontSize } from '@/utils/setFontSize'
 import ElementPlus from 'element-plus'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import 'element-plus/es/components/message/style/css'
+import 'element-plus/es/components/message-box/style/css'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
-// 模拟挂载一个全局方法
-function test() {
-  return '我是全局方法'
-}
 const app = createApp(App)
 
-app.config.globalProperties.$Test = test
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
+app.provide('setFontSize', setFontSize)
 
 app.use(ElementPlus, {
   locale: zhCn,

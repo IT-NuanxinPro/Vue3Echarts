@@ -7,7 +7,9 @@
 </template>
 
 <script setup>
-// import LeftBox from 
+import LeftBox from '@/views/bigScreen/components/content/leftBox/index.vue'
+import CenterBox from '@/views/bigScreen/components/content/centerBox/index.vue'
+import RightBox from '@/views/bigScreen/components/content/rightBox/index.vue'
 </script>
 <style lang="scss" scoped>
 .main {

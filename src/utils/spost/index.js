@@ -11,7 +11,7 @@ const mode = import.meta.env.MODE
 const baseURLs = {
   development: import.meta.env.VITE_APP_API_Dev_URL,
   test: import.meta.env.VITE_APP_API_Test_URL,
-  production: import.meta.env.VITE_APP_API_Production_URL
+  production: import.meta.env.VITE_APP_API_Prod_URL
 }
 const API = axios.create({
   timeout: 10 * 1000 * 6 * 100,

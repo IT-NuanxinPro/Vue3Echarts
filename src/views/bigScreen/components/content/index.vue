@@ -1,14 +1,13 @@
 <template>
-  <div class="main" ref="main">
-    <h1>{{ content }}</h1>
+  <div class="main">
+    <LeftBox />
+    <CenterBox />
+    <RightBox />
   </div>
 </template>
 
 <script setup>
-import { getCurrentInstance } from 'vue'
-const content = ref('content')
-const { proxy } = getCurrentInstance()
-console.log(proxy.$Test())
+// import LeftBox from 
 </script>
 <style lang="scss" scoped>
 .main {

@@ -10,7 +10,7 @@ const setFontSize = inject('setFontSize')
 let initSize = ref(setFontSize()) // 初始化字体大小
 let myChart = ref(null)
 const chartDom = shallowRef(null)
-const options = ref({
+const options = shallowRef({
   grid: {
     // 边距自行修改
     bottom: '0%',

@@ -33,7 +33,7 @@ const items = [importantGuest, cuServiceProgram, dataGovernance]
 .leftBox {
   width: 28.5%;
   height: 100%;
-  margin: 0 0 0 0.31%;
+  margin: 0 0 0 0.3%;
   padding: 0 0.25%;
   box-sizing: border-box;
   border: 1.1px solid #004DCF;

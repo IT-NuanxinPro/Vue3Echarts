@@ -8,7 +8,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import stylePxToVw from './src/plugins/stylePxToVw'
 
 export default defineConfig({
-  base: '/government-server/',
+  base: './',
   plugins: [
     stylePxToVw(), //行间style属性px转vw
     vue(),
